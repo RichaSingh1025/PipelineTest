@@ -1,9 +1,16 @@
-node{
-   stage('SCM Checkout'){
-     git 'https://github.com/RichaSingh1025/PipelineTest'
-   }
-   stage('Compile-Package'){
-      def mvnhome = tool name: 'mvn3', type: 'maven'
-      sh '${mvnhome}/bin/mvn package'
-   }
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
 }
